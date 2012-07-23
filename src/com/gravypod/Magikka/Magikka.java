@@ -1,7 +1,6 @@
 package com.gravypod.Magikka;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
 import java.util.logging.Logger;
 
 import org.bukkit.entity.Player;
@@ -13,7 +12,7 @@ import com.gravypod.Magikka.listeners.PlayerListener;
 
 public class Magikka extends JavaPlugin {
 	
-	public List<Player> fireCasters = new ArrayList<Player>(); // Move this to a HashMap; Hold a <Player, Int>; Int = amount of times they used this command
+	public HashMap<Player, Integer> fireCasters = new HashMap<Player, Integer>(); // Move this to a HashMap; Hold a <Player, Int>; Int = amount of times they used this command
 	
 	Logger log = Logger.getLogger("Minecraft");
 	

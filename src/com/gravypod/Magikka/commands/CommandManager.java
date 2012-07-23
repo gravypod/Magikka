@@ -25,7 +25,7 @@ public class CommandManager implements CommandExecutor {
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String cmd, String[] args) {
 
-		switch (commands.valueOf(cmd)) {
+		switch (commands.valueOf(args[1])) {
 		case fire:
 			fire(sender);
 			return true;
@@ -41,7 +41,8 @@ public class CommandManager implements CommandExecutor {
 		if (sender instanceof Player) {
 			Player player = (Player) sender;
 			
-			plugin.fireCasters.add(player);
+			plugin.fireCasters.put(player, 0);
+			
 		} else {
 			
 			sender.sendMessage("You must be in game to use that!");
