@@ -17,7 +17,7 @@ public class CommandManager implements CommandExecutor {
 	
 	}
 	
-	private enum commands {
+	private enum commandArg {
 		fire
 	}
 	
@@ -25,7 +25,7 @@ public class CommandManager implements CommandExecutor {
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String cmd, String[] args) {
 
-		switch (commands.valueOf(args[1])) {
+		switch (commandArg.valueOf(args[1])) {
 		case fire:
 			fire(sender);
 			return true;
